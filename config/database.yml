@@ -49,6 +49,7 @@ test:
 #
 production:
   <<: *default
-  database: top_hat_challenge_production
-  username: top_hat_challenge
-  password: <%= ENV['TOP_HAT_CHALLENGE_DATABASE_PASSWORD'] %>
+  database: <%= ENV['CLEARDB_DATABASE'] %>
+  username: <%= ENV['CLEARDB_USERNAME'] %>
+  password: <%= ENV['CLEARDB_PASSWORD'] %>
+  host: <%= ENV['CLEARDB_HOST'] %>

@@ -4,4 +4,8 @@ class ApplicationController < ActionController::Base
     render plain: "OK"
   end
 
+  def db_test
+    status_ok = ActiveRecord::Base.connection.present?
+    render plain: status_ok ? "DB OK" : "DB Disconnected."
+  end
 end
