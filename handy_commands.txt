@@ -1,0 +1,5 @@
+heroku run bash
+heroku run rake db:migrate
+heroku logs --tail
+rails generate model MyModel col_name:string other:int
+git push heroku master
